@@ -10,48 +10,32 @@ html{
     max-height: 100%;
 }
   
-* {box-sizing: border-box;}
+* {box-sizing: border-box; }
 body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
+.mySlides {
+display: none;
+z-index: 3;
+
+}
+img {vertical-align: middle; }
+
+img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:70%;
+  border-radius: 50px;
+  z-index: 3;
+}
 
 /* Контейнер слайд-шоу */
 .slideshow-container {
   max-width: 100%;
   position: relative;
   margin: auto;
+  z-index: 3;
 }
-
-/* Подпись текста */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Номер текста (1/3 и т.д.) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Точки/пули/индикаторы */
-<-- .dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-} -->
 
 .active {
   background-color: #717171;
@@ -66,94 +50,86 @@ img {vertical-align: middle;}
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .3} 
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .3} 
   to {opacity: 1}
 }
 
-/* На небольших экранах уменьшите размер текста */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
 </style>
 </head>
+<link rel="stylesheet" href="style.css">
 <body>
 
-<!-- <h1>Автоматический слайд-шоу</h1>
-
-<p>Меняется изображение каждые 2 секунды:</p> -->
+<img src="img/text.png" style="z-index:4; width:12%; top: 82%; left: 26%;">
 
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <!-- <div class="numbertext">1 / 3</div>
-  <img src="img/popcornbuckettexture.png" alt="Природа" style="width:100%">
-  <div class="text">Подпись текста</div> -->
-  <img src="img/1.jpg" style="width:100%">
+  <img src="img/1.jpg">
 </div>
 
 <div class="mySlides fade">
-  <img src="img/2.jpg" style="width:100%">
+  <img src="img/2.jpg">
 </div>
 
 <div class="mySlides fade">
-  <img src="img/3.jpg" style="width:100%">
+  <img src="img/3.jpg">
 </div>
 
 <div class="mySlides fade">
-  <img src="img/4.jpg" style="width:100%">
+  <img src="img/4.jpg">
 </div>
 
 <div class="mySlides fade">
-  <img src="img/5.jpg" style="width:100%">
+  <img src="img/5.jpg">
 </div>
 
 <div class="mySlides fade">
-  <img src="img/6.jpg" style="width:100%">
+  <img src="img/6.jpg">
 </div>
 
 <div class="mySlides fade">
-  <img src="img/7.jpg" style="width:100%">
+  <img src="img/7.jpg">
 </div>
 
 <div class="mySlides fade">
-  <img src="img/8.jpg" style="width:100%">
+  <img src="img/8.jpg">
 </div>
 
 <div class="mySlides fade">
-  <img src="img/9.jpg" style="width:100%">
+  <img src="img/9.jpg">
 </div>
 
 <div class="mySlides fade">
-  <img src="img/10.jpg" style="width:100%">
+  <img src="img/10.jpg">
 </div>
 
 <div class="mySlides fade">
-  <img src="img/11.jpg" style="width:100%">
+  <img src="img/11.jpg">
 </div>
 
 <div class="mySlides fade">
-  <img src="img/12.jpg" style="width:100%">
+  <img src="img/12.jpg">
 </div>
 
 <div class="mySlides fade">
-  <img src="img/13.jpg" style="width:100%">
+  <img src="img/13.jpg">
 </div>
 
 <div class="mySlides fade">
-  <img src="img/14.jpg" style="width:100%">
+  <img src="img/14.jpg">
 </div>
 
 <div class="mySlides fade">
-  <img src="img/15.jpg" style="width:100%">
+  <img src="img/15.jpg">
 </div>
 
 <div class="mySlides fade">
-  <img src="img/16.jpg" style="width:100%">
+  <img src="img/16.jpg">
 </div>
     
 </div>
@@ -178,10 +154,17 @@ function showSlides() {
 
   slides[slideIndex-1].style.display = "block";  
 
-  setTimeout(showSlides, 4000); // Меняйте изображение каждые последнее значение/1000 секунды
+  setTimeout(showSlides, 5000); // Меняйте изображение каждые последнее значение/1000 секунды
 }
 </script>
 
 </body>
+
 </html>
 
+<body class="back-row-toggle splat-toggle">
+        <div class="rain front-row"></div>
+        <div class="rain back-row"></div>
+    </body>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src="script.js"></script>
