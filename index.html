@@ -64,7 +64,7 @@ img {
 <link rel="stylesheet" href="style.css">
 <body>
 
-<audio controls autoplay>
+<audio loop autoplay>
 	<source src="https://mashup.su/1/ATtyoma%20-%20Self%20Control%20is%20Coming.mp3" type="audio/mp3">
 </audio>
 
@@ -144,9 +144,11 @@ img {
 <script>
 var slideIndex = 0;
 showSlides();
-audioElement.play();
 
 function showSlides() {
+  var audio = document.getElementById("myaudio");
+  audio.volume = 0.2;
+
   var i;
   
   var slides = document.getElementsByClassName("mySlides");
