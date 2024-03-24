@@ -6,8 +6,8 @@ html {
     height: 100%;
     margin: 0;
     overflow: hidden;
-    /* background: linear-gradient(to bottom, #202020, #111119); */
-	background-color: #1A1A1A;
+    background: linear-gradient(to bottom, #321A4D, #1F1130);
+	/* background-color: #2B002B; */
   }
   
   .rain {
@@ -201,7 +201,7 @@ body{
   height: 300%;
   width: 300%;
   position: fixed;
-  opacity:0.04;
+  opacity:0.03;
    animation: animateGrain 8s steps(6) infinite;
    z-index:4
 }
