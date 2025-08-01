@@ -3,19 +3,19 @@
 // Service definitions with dependency requirements
 const services = [
 	{ name: 'YouTube', icon: 'youtube', url: 'https://youtube.com/', action: 'select', requiresCodec: false },
-	{ name: 'TikTok', icon: 'tiktok', url: 'https://tiktok.com/', action: 'select', requiresCodec: true },
+	{ name: 'VKontakte', icon: 'vk', url: 'https://vk.com/video', action: 'select', requiresCodec: false },
 	{ name: 'SoundCloud', icon: 'soundcloud', url: 'https://soundcloud.com/discover', action: 'select', requiresCodec: false },
-	{ name: 'Dailymotion', icon: 'dailymotion', url: 'https://www.dailymotion.com/', action: 'select', requiresCodec: true },
+	{ name: 'TikTok', icon: 'tiktok', url: 'https://tiktok.com/', action: 'select', requiresCodec: true },
 	{ name: 'Twitch', icon: 'twitch', url: 'https://www.twitch.tv/', action: 'select', requiresCodec: true },
+	{ name: 'OK', icon: 'ok', url: 'https://ok.ru/video', action: 'select', requiresCodec: true },
+	{ name: 'Rutube', icon: 'rutube', url: 'https://rutube.ru/', action: 'open', requiresCodec: true },
+	{ name: 'Dailymotion', icon: 'dailymotion', url: 'https://www.dailymotion.com/', action: 'select', requiresCodec: true },
 	{ name: 'Rumble', icon: 'rumble', url: 'https://rumble.com/', action: 'select', requiresCodec: true },
 	{ name: 'DLive', icon: 'dlive', url: 'https://dlive.tv/', action: 'select', requiresCodec: true },
 	{ name: 'Kick', icon: 'kick', url: 'https://kick.com/', action: 'select', requiresCodec: true },
 	{ name: 'Bilibili', icon: 'bilibili', url: 'https://www.bilibili.tv/', action: 'open', requiresCodec: true },
 	{ name: 'Archive', icon: 'archive', url: 'https://archive.org/details/movies', action: 'select', requiresCodec: true },
-	{ name: 'VKontakte', icon: 'vk', url: 'https://vk.com/video', action: 'select', requiresCodec: false },
-	{ name: 'Sibnet', icon: 'sibnet', url: 'https://video.sibnet.ru/rub/anime/', action: 'select', requiresCodec: true },
-	{ name: 'OK', icon: 'ok', url: 'https://ok.ru/video', action: 'select', requiresCodec: true },
-	{ name: 'Rutube', icon: 'rutube', url: 'https://rutube.ru/', action: 'open', requiresCodec: true }
+	{ name: 'Sibnet', icon: 'sibnet', url: 'https://video.sibnet.ru/rub/anime/', action: 'select', requiresCodec: true }
 ];
 
 // Simplified codec checking (removed x86-64 requirement)
