@@ -124,22 +124,36 @@ body {
 	background-image: url(../images/logos/youtube.png);
 }
 
-.logo-tiktok {
-	background-image: url(../images/logos/tiktok.png);
-	background-size: 75px;
+.logo-vk {
+	background-image: url(../images/logos/vk.png);
+	background-size: 50px;
 }
 
 .logo-soundcloud {
 	background-image: url(../images/logos/soundcloud.svg);
 }
 
-.logo-dailymotion {
-	background-image: url(../images/logos/dailymotion.png);
-	background-size: 55px;
+.logo-tiktok {
+	background-image: url(../images/logos/tiktok.png);
+	background-size: 75px;
 }
 
 .logo-twitch {
 	background-image: url(../images/logos/twitch.png);
+}
+
+.logo-ok {
+	background-image: url(../images/logos/okru.png);
+}
+
+.logo-rutube {
+	background-image: url(../images/logos/rutube.jpg);
+	background-size: 50px;
+}
+
+.logo-dailymotion {
+	background-image: url(../images/logos/dailymotion.png);
+	background-size: 55px;
 }
 
 .logo-rumble {
@@ -162,22 +176,8 @@ body {
 	background-image: url(../images/logos/archive.png);
 }
 
-.logo-vk {
-	background-image: url(../images/logos/vk.png);
-	background-size: 50px;
-}
-
 .logo-sibnet {
 	background-image: url(../images/logos/sibnet.png);
-}
-
-.logo-ok {
-	background-image: url(../images/logos/okru.png);
-}
-
-.logo-rutube {
-	background-image: url(../images/logos/rutube.jpg);
-	background-size: 50px;
 }
 
 /* Disabled Service Styles */
