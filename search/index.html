@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cinema - Request Media</title>
+	<link rel="stylesheet" href="./styles/request.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Codec Requirements Popup -->
+	<div id="codec-popup" class="codec-popup hidden">
+		<div class="popup-overlay" onclick="closeCodecPopup()"></div>
+		<div class="popup-content">
+			<div class="popup-header">
+				<h3>CEF Codec Fix Required</h3>
+				<button class="close-btn" onclick="closeCodecPopup()">×</button>
+			</div>
+			<div class="popup-body">
+				<div class="popup-icon">🎥</div>
+				<p><strong id="service-name-popup"></strong> requires CEF Codec Fix to function properly.</p>
+				<div class="instructions">
+					<h4>To enable this service:</h4>
+					<ol>
+						<li>Download and apply CEF Codec Fix</li>
+						<li>Restart Garry's Mod completely</li>
+						<li>Return to Cinema and try again</li>
+					</ol>
+				</div>
+			</div>
+			<div class="popup-actions">
+				<button onclick="closeCodecPopup()" class="btn-secondary">Cancel</button>
+				<button onclick="openCodecInstructions()" class="btn-primary">Get Codec Fix</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Main Container -->
+	<div class="app-container">
+
+		<!-- Services Grid -->
+		<section class="services-section">
+			<div class="services-grid" id="services-grid">
+				<!-- Service cards will be populated by JavaScript -->
+			</div>
+		</section>
+
+		<!-- URL Input Section -->
+		<section class="url-section">
+			<div class="url-container">
+				<h2 class="url-title">Or paste a direct URL</h2>
+				<div class="input-group">
+					<input
+						id="urlinput"
+						type="url"
+						class="url-input"
+						placeholder="Paste your video URL here..."
+						autocomplete="off"
+						spellcheck="false"
+					>
+					<button onclick="requestUrl()" class="submit-btn" id="submit-btn">
+						<span class="btn-text">Request</span>
+						<span class="btn-icon">→</span>
+					</button>
+				</div>
+				<div class="supported-formats">
+					<span>Supports common share links from supported services, images (JPG, PNG, GIF, BMP), video files (MP4, MOV, MKV, WebM), audio files (MP3, WAV, OGG, M4A, AAC, FLAC), and streaming formats (DASH, M3U8), also Google Drive and Mega links</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- Status Indicator -->
+		<div id="status-indicator" class="status-indicator hidden">
+			<div class="status-content">
+				<div class="spinner"></div>
+				<span id="status-text">Checking URL...</span>
+			</div>
+		</div>
+	</div>
+
+	<script src="./scripts/request.js"></script>
+</body>
+</html>
